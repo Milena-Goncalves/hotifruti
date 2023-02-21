@@ -8,7 +8,7 @@ import manga from "./img/manga.png";
 import limao from "./img/limao.png";
 import beterraba from "./img/beterraba.png";
 import tomate from "./img/tomate.png";
-import carrinhoingCart from "./img/ShoppingCart.png";
+import ShoppingCart from "./img/ShoppingCart.png";
 import minusCircle from "./img/MinusCircle.png";
 import plusCircle from "./img/PlusCircle.png";
 
@@ -37,9 +37,9 @@ class App extends Component {
         <main>
           <section className="frutas-container">
             <h2>Nossos produtos</h2>
-            <div className="frutas">
+            <div className="state-frutas">
               {this.state.frutas.map((item) => (
-                <div className="frutas-square">
+                <div className="frutas-geral">
                   <div>
                     <img
                       className="frutasImg"
@@ -53,16 +53,16 @@ class App extends Component {
           </section>
 
           <section className="carrinho-container">
-            <div className="carrinho-rectangle">
-              <div className="carrinho-square">
+            <div className="back-carrinho">
+              <div className="carrinho">
                 <img
                   className="cart-icon"
-                  src={carrinhoingCart}
-                  alt="carrinhoing cart"
+                  src={ShoppingCart}
+                  alt="Shopping cart"
                 />
                 <p>Arraste o seu produto aqui para colocar no carrinho</p>
               </div>
-              <div className="carrinho-btn">
+              <div className="menu-carrinho">
                 <img
                   className="plus-circle"
                   src={plusCircle}
